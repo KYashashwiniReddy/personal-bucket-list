@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Personal Bucket List</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: linear-gradient(to bottom, #f5f7fa, #c3cfe2);
+      color: #333;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 600px;
+      padding: 20px;
+      background-color: #fff;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      text-align: center;
+    }
+
+    h1 {
+      font-family: 'Poppins', sans-serif;
+      font-size: 24px;
+      color: #4a90e2;
+      margin-bottom: 20px;
+    }
+
+    .bucket_list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .bucket_list li {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background-color: #f9f9f9;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      padding: 10px 15px;
+      margin-bottom: 10px;
+      transition: background-color 0.3s ease;
+    }
+
+    .bucket_list li:hover {
+      background-color: #e6f7ff;
+    }
+
+    .bucket_list__checkbox {
+      margin-right: 10px;
+      transform: scale(1.2);
+      cursor: pointer;
+    }
+
+    .bucket_list__value {
+      flex-grow: 1;
+      font-weight: 600;
+      text-align: left;
+      color: #333;
+    }
+
+    .bucket_list__checkbox:checked + .bucket_list__value {
+  color: blueviolet;
+  text-decoration: line-through;
+}
+@media (max-width: 768px) {
+  .container{
+    background-color: lightblue;
+    color: darkblue;
+  }
+}
+
+@media (max-width: 576px) {
+  .container {
+    background-color: lightgreen;
+    color: darkgreen;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container{
+    background-color: lightgrey;
+    color: black;
+  }
+}
+
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1><i>Personal Bucket List</i></h1>
+    <ul class="bucket_list">
+      <li>
+        <input class="bucket_list__checkbox" type="checkbox" onclick="toggleCompleted(this)">
+        <span class="bucket_list__value">Visit Paris</span>
+      </li>
+      <li>
+        <input class="bucket_list__checkbox" type="checkbox" onclick="toggleCompleted(this)">
+        <span class="bucket_list__value">Enjoy Coding</span>
+      </li>
+      <li>
+        <input class="bucket_list__checkbox" type="checkbox" onclick="toggleCompleted(this)">
+        <span class="bucket_list__value">Eat Healthy</span>
+      </li>
+      <li>
+        <input class="bucket_list__checkbox" type="checkbox" onclick="toggleCompleted(this)">
+        <span class="bucket_list__value">Love Yourself</span>
+      </li>
+    </ul>
+  </div>
+</body>
+</html>
